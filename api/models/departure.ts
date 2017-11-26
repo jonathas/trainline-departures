@@ -1,5 +1,4 @@
 import * as request from "request";
-import cache from "../config/cache";
 
 export interface IDeparture {
     requestId: string;
@@ -29,8 +28,18 @@ export interface IDeparture {
 }
 
 class Departure {
-    static async getByStation(stationCode: string): Promise<IDeparture> {
-        return null;
+    static getByStationCode(stationCode: string): Promise<IDeparture> {
+        let options = {
+            url: `${process.env.EXT_API_BASE}departures/${stationCode.toUpperCase().trim()}`,
+            method: "GET"
+        };
+
+        return new Promise((resolve, reject) => {
+            request(options, (err, response, body) => {
+                if (err) return reject(err);
+                return resolve(<any>response);
+            });
+        });
     }
 }
 

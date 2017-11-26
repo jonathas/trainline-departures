@@ -4,7 +4,7 @@ class Departures {
 
     public async getAll(req, res): Promise<void> {
         try {
-            Departure.getByStation();
+            let departures = await Departure.getByStationCode();
         } catch (err) {
 
         }

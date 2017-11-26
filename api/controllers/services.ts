@@ -5,9 +5,9 @@ class Services {
 
     public async getOne(req, res): Promise<void> {
         try {
-            Service.getByServiceId();
+            let service = await Service.getByServiceId();
         } catch (err) {
-            
+
         }
     }
 

@@ -1,3 +1,5 @@
+import * as request from "request";
+
 export interface IService {
     requestId: string;
     isRealTimeDataAvailable: boolean;
@@ -30,8 +32,18 @@ export interface IService {
 }
 
 class Service {
-    static async getByServiceId (serviceId: string): Promise<IService> {
-        return null;
+    static getByServiceId (serviceId: string, date: string): Promise<IService> {
+        let options = {
+            url: `${process.env.EXT_API_BASE}callingPattern/${serviceId.toUpperCase().trim()}/${date}`,
+            method: "GET"
+        };
+
+        return new Promise((resolve, reject) => {
+            request(options, (err, response, body) => {
+                if (err) return reject(err);
+                return resolve(<any>response);
+            });
+        });
     }
 }
 

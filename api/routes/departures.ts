@@ -1,4 +1,4 @@
-const { check } = require("express-validator/check");
+import { check } from "express-validator/check";
 import Departure from "../controllers/departures";
 
 export = (app) => {
@@ -60,6 +60,8 @@ export = (app) => {
      *      }
      *
      */
-    app.get(endpoint + "/:station*", Departure.getAll);
+    app.get(endpoint + "/:station*", [
+        check("station").isAlpha().isLength({ max: 3 })
+    ], Departure.getAll);
 
 };

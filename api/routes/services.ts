@@ -1,17 +1,17 @@
-const { check } = require("express-validator/check");
+import { check } from "express-validator/check";
 import Service from "../controllers/services";
 
 export = (app) => {
     const endpoint = process.env.API_BASE + "services";
 
     /**
-     * @api {get} /api/v1/departures/:serviceCode/:date Returns the service and its stops
+     * @api {get} /api/v1/departures/:serviceId/:date Returns the service and its stops
      * @apiVersion 1.0.0
      * @apiName getOne
      * @apiGroup Services
      * @apiPermission public
      *
-     * @apiParam {String} serviceCode The service code obtained in the list of departures for a station.
+     * @apiParam {String} serviceId The service id obtained in the list of departures for a station.
      * @apiParam {String} date The date of departure (YYYY-MM-dd)
      *
      * @apiExample {js} Example usage:
@@ -99,6 +99,9 @@ export = (app) => {
      *      }
      *
      */
-    app.get(endpoint + "/:serviceCode/:date", Service.getOne);
+    app.get(endpoint + "/:serviceId/:date", [
+        check("serviceId").isAlphanumeric().isLength({ max: 6 }),
+        check("date").isEmpty()
+    ], Service.getOne);
 
 };

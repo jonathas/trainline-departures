@@ -32,7 +32,7 @@ export interface IService {
 }
 
 class Service {
-    static getByServiceId (serviceId: string, date: string): Promise<IService> {
+    public getFromAPI = (serviceId: string, date: string): Promise<IService> => {
         let options = {
             url: `${process.env.EXT_API_BASE}callingPattern/${serviceId.toUpperCase().trim()}/${date}`,
             method: "GET"
@@ -47,4 +47,4 @@ class Service {
     }
 }
 
-export default Service;
+export default new Service();

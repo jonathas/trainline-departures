@@ -12,10 +12,10 @@ export = (app) => {
      * @apiPermission public
      *
      * @apiParam {String} stationCode The station identifier. You can get the list here: http://www.nationalrail.co.uk/stations_destinations/48541.aspx
-     * @apiParam {String} date (optional) The date of departure (YYYY-MM-dd)
+     * @apiParam {String} date (optional) The date of departure (YYYY-MM-DD)
      * @apiParam {String} time (optional) The time (HH:mm)
-     * @apiParam {String} expectedwindow (optional) The time window of the departures
-     * @apiParam {String} desirednumberofservices (optional) The number of services that will be returned
+     * @apiParam {Number} expectedwindow (optional) The time window of the departures (3 characters)
+     * @apiParam {Number} desirednumberofservices (optional) The number of services that will be returned (Max 100)
      *
      * @apiExample {js} Example usage:
      * $http.get(url)

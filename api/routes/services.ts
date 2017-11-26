@@ -12,7 +12,7 @@ export = (app) => {
      * @apiPermission public
      *
      * @apiParam {String} serviceId The service id obtained in the list of departures for a station.
-     * @apiParam {String} date The date of departure (YYYY-MM-dd)
+     * @apiParam {String} date The date of departure (YYYY-MM-DD)
      *
      * @apiExample {js} Example usage:
      * $http.get(url)

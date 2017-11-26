@@ -1,5 +1,4 @@
 import * as request from "request";
-import cache from "../config/cache";
 
 interface IService {
     serviceIdentifier: string;
@@ -30,24 +29,20 @@ export interface IDeparture {
     services: IService[];
 }
 
+export interface IDepartureRequest {
+    stationCode: string;
+    date: string;
+    time: string;
+    expectedwindow: string;
+    desidernumberofservices: string;
+}
+
 class Departure {
 
-    public getByStationCode = async (stationCode: string): Promise<IDeparture> => {
-        let key = `departures_${stationCode}`;
-        let departure = await cache.getAsync(key);
-        if (departure) return <IDeparture>JSON.parse(departure);
-
-        departure = this.prepareResponse(await this.getFromAPI(stationCode));
-
-        await cache.setexAsync(key, 60, JSON.stringify(departure));
-
-        return departure;
-    }
-
-    private getFromAPI = (stationCode: string): Promise<IDeparture> => {
+    public getFromAPI = (departureRequest: IDepartureRequest): Promise<IDeparture> => {
         return new Promise((resolve, reject) => {
             let options = {
-                url: `${process.env.EXT_API_BASE}departures/${stationCode.toUpperCase().trim()}`,
+                url: `${process.env.EXT_API_BASE}departures/${this.getQueryString(departureRequest)}`,
                 method: "GET"
             };
 
@@ -62,14 +57,14 @@ class Departure {
         });
     }
 
-    private filterServices(services: Array<IService>): Array<IService> {
+    private getQueryString = (departureRequest: IDepartureRequest) => {
+
+    }
+
+    private filterServices = (services: Array<IService>): Array<IService> => {
         return services.filter(service => service.transportMode === "TRAIN");
     }
 
-    private prepareResponse = (departure: IDeparture) => {
-        // Make it return only the relevant data
-        return departure;
-    }
 }
 
 export default new Departure();

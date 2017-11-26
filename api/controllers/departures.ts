@@ -1,5 +1,6 @@
 import Validation from "../helpers/validation";
 import Departure, { IDeparture, IDepartureRequest, IDepartureResponse } from "../models/departure";
+import { formatError } from "../models/error";
 import * as util from "util";
 import * as fs from "fs";
 import cache from "../config/cache";
@@ -15,12 +16,12 @@ class Departures {
 
             res.status(200).json(departures);
         } catch (err) {
-            res.status(400).json({ errors: { code: "InvalidRequest", description: err.message } });
+            res.status(400).json(formatError("InvalidRequest", err.message));
         }
     }
 
     private getDeparture = async (req): Promise<IDeparture> => {
-        let departureRequest = this.assignDepartureRequest(req);
+        let departureRequest = Departure.assignDepartureRequest(req);
 
         let key = this.getCacheKey(departureRequest);
         let departure = await cache.getAsync(key);
@@ -33,23 +34,6 @@ class Departures {
         return departure;
     }
 
-    private assignDepartureRequest = (req): IDepartureRequest => {
-        let departureRequest = {
-            stationCode: req.params.stationCode,
-            date: "",
-            time: "",
-            expectedwindow: "",
-            desidernumberofservices: ""
-        };
-
-        departureRequest.date = (req.params.date) ? req.params.date : "";
-        departureRequest.time = (req.params.time) ? req.params.time : "";
-        departureRequest.expectedwindow = (req.params.expectedwindow) ? req.params.expectedwindow : "";
-        departureRequest.desidernumberofservices = (req.params.desidernumberofservices) ? req.params.desidernumberofservices : "";
-
-        return departureRequest;
-    }
-
     private getCacheKey = (departureRequest: IDepartureRequest): string => {
         let paramsUsed = Object.keys(departureRequest).filter(key => departureRequest[key] !== "");
         let values = paramsUsed.map(param => departureRequest[param]);
@@ -60,6 +44,7 @@ class Departures {
     private prepareResponse = async (departure: IDeparture): Promise<Array<IDepartureResponse>> => {
         try {
             const stations = await this.getStations();
+
             let departureResponse = <Array<IDepartureResponse>>departure.services.map(service => {
                 return <IDepartureResponse>{
                     serviceIdentifier: service.serviceIdentifier,

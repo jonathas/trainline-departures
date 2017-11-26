@@ -7,8 +7,7 @@ export = () => {
 
     app.use(bodyParser.json());
 
-    // so we can get the client's IP address
-    app.enable("trust proxy");
+    // CORS is configured on Nginx
 
     require("../routes")(app);
 

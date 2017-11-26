@@ -19,6 +19,16 @@ services:
             - ../api:/app
         environment:
             - NODE_ENV=production
+        depends_on:
+            - cache
+        network_mode: host
+
+    cache:
+        image: redis:4.0.2-alpine
+        container_name: trainline_cache
+        volumes: 
+            - ./redis:/usr/local/etc/redis
+        command: "redis-server /usr/local/etc/redis/redis.conf"
         network_mode: host
 
 networks:

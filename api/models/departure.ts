@@ -67,11 +67,31 @@ class Departure {
     }
 
     private getQueryString = (departureRequest: IDepartureRequest) => {
-
+        let queryString = departureRequest.stationCode + "?";
+        let paramsUsed = Object.keys(departureRequest).filter(key => departureRequest[key] !== "");
+        let query = paramsUsed.map(param => param + "=" + departureRequest[param]);
+        return queryString + query.join("&");
     }
 
     private filterServices = (services: Array<IService>): Array<IService> => {
         return services.filter(service => service.transportMode === "TRAIN");
+    }
+
+    public assignDepartureRequest = (req): IDepartureRequest => {
+        let departureRequest = {
+            stationCode: req.params.stationCode,
+            date: "",
+            time: "",
+            expectedwindow: "",
+            desidernumberofservices: ""
+        };
+
+        departureRequest.date = (req.params.date) ? req.params.date : "";
+        departureRequest.time = (req.params.time) ? req.params.time : "";
+        departureRequest.expectedwindow = (req.params.expectedwindow) ? req.params.expectedwindow : "";
+        departureRequest.desidernumberofservices = (req.params.desidernumberofservices) ? req.params.desidernumberofservices : "";
+
+        return departureRequest;
     }
 
 }

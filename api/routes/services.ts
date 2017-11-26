@@ -5,7 +5,7 @@ export = (app) => {
     const endpoint = process.env.API_BASE + "services";
 
     /**
-     * @api {get} /api/v1/departures/:serviceId/:date Returns the service and its stops
+     * @api {get} /api/v1/services/:serviceId/:date Returns the service and its stops
      * @apiVersion 1.0.0
      * @apiName getOne
      * @apiGroup Services

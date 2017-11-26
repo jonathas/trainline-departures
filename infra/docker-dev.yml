@@ -20,6 +20,16 @@ services:
         environment:
             - NODE_ENV=test
         command: "pm2-dev start --auto-exit --env test process.yml"
+        depends_on:
+            - cache
+        network_mode: host
+
+    cache:
+        image: redis:4.0.2-alpine
+        container_name: trainline_cache
+        volumes: 
+            - ./redis:/usr/local/etc/redis
+        command: "redis-server /usr/local/etc/redis/redis.conf"
         network_mode: host
 
 networks:

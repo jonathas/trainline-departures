@@ -1,5 +1,20 @@
 import * as request from "request";
 
+interface IScheduled {
+    scheduledTime: string;
+    scheduledPlatform: string;
+}
+
+interface IRealTime {
+    realTimeServiceInfo: {
+        hasArrived?: boolean;
+        hasDeparted?: boolean;
+        realTime: string;
+        realTimePlatform: string;
+        realTimeFlag: string;
+    };
+}
+
 export interface IService {
     requestId: string;
     isRealTimeDataAvailable: boolean;
@@ -11,30 +26,44 @@ export interface IService {
         serviceDestinations: [string];
         stops: [{
             location: { crs: string };
-            arrival: { notApplicable: boolean };
+            arrival: {
+                notApplicable?: boolean;
+                scheduled?: IScheduled;
+                realTime?: IRealTime;
+            };
             departure: {
-                scheduled: {
-                    scheduledTime: string;
-                    scheduledPlatform: string;
-                };
-                realTime: {
-                    realTimeServiceInfo: {
-                        hasDeparted: boolean;
-                        realTime: string;
-                        realTimePlatform: string;
-                        realTimeFlag: string;
-                    }
-                };
+                notApplicable?: boolean;
+                scheduled?: IScheduled;
+                realTime?: IRealTime;
             };
             callingType: string;
         }]
     };
 }
 
+export interface IServiceResponse {
+    originName: string;
+    destinationName: string;
+    serviceOperator: string;
+    stops: [{
+        stationName: string;
+        arrival: {
+            notApplicable?: boolean;
+            scheduled?: IScheduled;
+            realTime?: IRealTime;
+        };
+        departure: {
+            notApplicable?: boolean;
+            scheduled?: IScheduled;
+            realTime?: IRealTime;
+        };
+    }];
+}
+
 class Service {
     public getFromAPI = (serviceId: string, date: string): Promise<IService> => {
         let options = {
-            url: `${process.env.EXT_API_BASE}callingPattern/${serviceId.toUpperCase().trim()}/${date}`,
+            url: `${process.env.EXT_API_BASE}callingPattern/${serviceId}/${date}`,
             method: "GET"
         };
 

@@ -1,5 +1,7 @@
 export = (app) => {
+
     require("./departures")(app);
+    require("./services")(app);
 
     app.get("/", (req, res) => res.status(200).json({ message: "Welcome to the Trainline departures API. Check the documentation for the list of available endpoints" }));
 

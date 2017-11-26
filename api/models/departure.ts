@@ -1,5 +1,5 @@
 import * as request from "request";
-import { IError, formatError } from "./error";
+import { IError } from "./error";
 
 export interface IService {
     serviceIdentifier: string;
@@ -85,7 +85,7 @@ class Departure {
         return (service.realTimeUpdatesInfo) ? service.realTimeUpdatesInfo.realTimeServiceInfo.realTimeFlag : "";
     }
 
-    public assignDepartureRequest = (req): IDepartureRequest => {
+    public assignRequest = (req): IDepartureRequest => {
         let departureRequest = {
             stationCode: req.params.stationCode,
             date: "",

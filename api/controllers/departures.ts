@@ -1,7 +1,7 @@
 import Validation from "../helpers/validation";
 import Stations from "../helpers/stations";
 import Departure, { IDeparture, IDepartureRequest, IDepartureResponse, IService } from "../models/departure";
-import { formatError } from "../models/error";
+import APIError from "../models/error";
 import log from "../config/logger";
 import cache from "../config/cache";
 
@@ -15,12 +15,12 @@ class Departures {
 
             res.status(200).json(departures);
         } catch (err) {
-            res.status(400).json(formatError("InvalidRequest", err.message));
+            APIError.returnError(res, err);
         }
     }
 
     private getDeparture = async (req): Promise<IDepartureResponse> => {
-        let departureRequest = Departure.assignDepartureRequest(req);
+        let departureRequest = Departure.assignRequest(req);
 
         let key = this.getCacheKey(departureRequest);
         let departureResponse = await cache.getAsync(key);

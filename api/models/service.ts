@@ -1,4 +1,5 @@
 import * as request from "request";
+import { IError } from "./error";
 
 interface IScheduled {
     scheduledTime: string;
@@ -15,7 +16,23 @@ interface IRealTime {
     };
 }
 
+interface IStops {
+    location: { crs: string; name?: string; };
+    arrival: {
+        notApplicable?: boolean;
+        scheduled?: IScheduled;
+        realTime?: IRealTime;
+    };
+    departure: {
+        notApplicable?: boolean;
+        scheduled?: IScheduled;
+        realTime?: IRealTime;
+    };
+    callingType: string;
+}
+
 export interface IService {
+    errors?: [IError];
     requestId: string;
     isRealTimeDataAvailable: boolean;
     service: {
@@ -24,20 +41,7 @@ export interface IService {
         transportMode: string;
         serviceOrigins: [string];
         serviceDestinations: [string];
-        stops: [{
-            location: { crs: string };
-            arrival: {
-                notApplicable?: boolean;
-                scheduled?: IScheduled;
-                realTime?: IRealTime;
-            };
-            departure: {
-                notApplicable?: boolean;
-                scheduled?: IScheduled;
-                realTime?: IRealTime;
-            };
-            callingType: string;
-        }]
+        stops: [IStops];
     };
 }
 
@@ -45,22 +49,11 @@ export interface IServiceResponse {
     originName: string;
     destinationName: string;
     serviceOperator: string;
-    stops: [{
-        stationName: string;
-        arrival: {
-            notApplicable?: boolean;
-            scheduled?: IScheduled;
-            realTime?: IRealTime;
-        };
-        departure: {
-            notApplicable?: boolean;
-            scheduled?: IScheduled;
-            realTime?: IRealTime;
-        };
-    }];
+    stops: [IStops];
 }
 
 class Service {
+
     public getFromAPI = (serviceId: string, date: string): Promise<IService> => {
         let options = {
             url: `${process.env.EXT_API_BASE}callingPattern/${serviceId}/${date}`,
@@ -70,10 +63,15 @@ class Service {
         return new Promise((resolve, reject) => {
             request(options, (err, response, body) => {
                 if (err) return reject(err);
-                return resolve(<any>JSON.parse(response.body));
+
+                let service = <IService>JSON.parse(response.body);
+                if (service.errors) return reject(service.errors);
+
+                return resolve(service);
             });
         });
     }
+
 }
 
 export default new Service();

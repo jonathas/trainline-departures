@@ -27,9 +27,9 @@ class Validation {
     }
 
     public static checkStationValid(stationCode: string) {
-        let stationName = Station.getName(stationCode);
+        let stationName = Station.getName(stationCode.toUpperCase());
 
-        if (stationName === stationCode) {
+        if (stationName === stationCode.toUpperCase()) {
             throw new Error("The informed station is invalid");
         }
     }

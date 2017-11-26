@@ -5,11 +5,28 @@ export interface IError {
     }];
 }
 
-export const formatError = (code: string, message: string): IError => {
-    return {
-        errors: [{
-            code: code,
-            description: message
-        }]
-    };
-};
+class APIError {
+    static returnError = (res, err) => {
+        let error = {
+            code: "",
+            description: ""
+        };
+
+        let status = 400;
+
+        if (err.message) {
+            error.code = "InvalidRequest";
+            error.description = err.message;
+        } else {
+            status = 500;
+            error.code = err[0].code;
+            error.description = err[0].description;
+        }
+
+        res.status(status).json({
+            errors: [error]
+        });
+    }
+}
+
+export default APIError;

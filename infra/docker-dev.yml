@@ -13,7 +13,7 @@ services:
         network_mode: host
 
     api:
-        image: keymetrics/pm2:7
+        image: keymetrics/pm2:8
         container_name: trainline_api
         volumes:
             - ../api:/app

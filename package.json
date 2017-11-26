@@ -1,0 +1,11 @@
+{
+  "name": "trainline-departures",
+  "description": "An API that returns the train services in order for the customers to view live departure information",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "GPL-3.0",
+  "author": "Jon Ribeiro <contact@jonathas.com>",
+  "scripts": {
+    "start": "node app.js"
+  }
+}

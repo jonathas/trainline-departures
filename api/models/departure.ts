@@ -37,6 +37,15 @@ export interface IDepartureRequest {
     desidernumberofservices: string;
 }
 
+export interface IDepartureResponse {
+    serviceIdentifier: string;
+    destinationName: string;
+    serviceOperator: string;
+    platform: string;
+    scheduledTime: string;
+    realTimeFlag: string;
+}
+
 class Departure {
 
     public getFromAPI = (departureRequest: IDepartureRequest): Promise<IDeparture> => {

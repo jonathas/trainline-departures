@@ -1,5 +1,5 @@
 import Validation from "../helpers/validation";
-import Departure, { IDeparture, IDepartureRequest } from "../models/departure";
+import Departure, { IDeparture, IDepartureRequest, IDepartureResponse } from "../models/departure";
 import * as util from "util";
 import * as fs from "fs";
 import cache from "../config/cache";
@@ -12,6 +12,7 @@ class Departures {
             Validation.departureRequest(req);
 
             let departures = await this.getDeparture(req);
+
             res.status(200).json(departures);
         } catch (err) {
             res.status(400).json({ errors: { code: "InvalidRequest", description: err.message } });
@@ -19,14 +20,13 @@ class Departures {
     }
 
     private getDeparture = async (req): Promise<IDeparture> => {
-        // Implement date, time, window and number of services in the cache key
         let departureRequest = this.assignDepartureRequest(req);
 
         let key = this.getCacheKey(departureRequest);
         let departure = await cache.getAsync(key);
         if (departure) return <IDeparture>JSON.parse(departure);
 
-        departure = this.prepareResponse(await Departure.getFromAPI(departureRequest));
+        departure = await this.prepareResponse(await Departure.getFromAPI(departureRequest));
 
         await cache.setexAsync(key, 60, JSON.stringify(departure));
 
@@ -51,23 +51,33 @@ class Departures {
     }
 
     private getCacheKey = (departureRequest: IDepartureRequest): string => {
-        let key = ["departures"];
-
         let paramsUsed = Object.keys(departureRequest).filter(key => departureRequest[key] !== "");
-        key.concat(paramsUsed);
+        let values = paramsUsed.map(param => departureRequest[param]);
 
-        return key.join("_");
+        return "departure_" + values.join("_");
     }
 
-    private prepareResponse = (departure: IDeparture) => {
-        // Make it return only the relevant data
-        /**
-         * service identifier, Time, stattion name, platform, status (On time) (or return the scheduled time + realTimeFlat, which is not always there), service operator name
-         */
-        return departure;
+    private prepareResponse = async (departure: IDeparture): Promise<Array<IDepartureResponse>> => {
+        try {
+            const stations = await this.getStations();
+            let departureResponse = <Array<IDepartureResponse>>departure.services.map(service => {
+                return <IDepartureResponse>{
+                    serviceIdentifier: service.serviceIdentifier,
+                    platform: service.scheduledInfo.scheduledPlatform,
+                    serviceOperator: service.serviceOperator,
+                    scheduledTime: service.scheduledInfo.scheduledTime,
+                    realTimeFlag: service.realTimeUpdatesInfo.realTimeServiceInfo.realTimeFlag,
+                    destinationName: stations[service.destinationList[0].crs]
+                };
+            });
+
+            return departureResponse;
+        } catch (err) {
+
+        }
     }
 
-    private loadStations = async (): Promise<{ code: string, name: string }> => {
+    private getStations = async () => {
         let stations = cache.getAsync("stations");
         if (stations) return JSON.parse(stations);
 

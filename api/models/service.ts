@@ -41,7 +41,7 @@ class Service {
         return new Promise((resolve, reject) => {
             request(options, (err, response, body) => {
                 if (err) return reject(err);
-                return resolve(<any>response);
+                return resolve(<any>JSON.parse(response.body));
             });
         });
     }

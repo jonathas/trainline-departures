@@ -5,13 +5,13 @@ export = (app) => {
     const endpoint = process.env.API_BASE + "departures";
 
     /**
-     * @api {get} /api/v1/departures/:station?date=2017-11-26&time=14:16&expectedwindow=-360&desidernumberofservices=50 Returns the departures
+     * @api {get} /api/v1/departures/:stationCode?date=2017-11-26&time=14:16&expectedwindow=-360&desidernumberofservices=50 Returns the departures
      * @apiVersion 1.0.0
      * @apiName getAll
      * @apiGroup Departures
      * @apiPermission public
      *
-     * @apiParam {String} station The station identifier. You can get the list here: http://www.nationalrail.co.uk/stations_destinations/48541.aspx
+     * @apiParam {String} stationCode The station identifier. You can get the list here: http://www.nationalrail.co.uk/stations_destinations/48541.aspx
      * @apiParam {String} date (optional) The date of departure (YYYY-MM-dd)
      * @apiParam {String} time (optional) The time (HH:mm)
      * @apiParam {String} expectedwindow (optional) The time window of the departures
@@ -60,8 +60,8 @@ export = (app) => {
      *      }
      *
      */
-    app.get(endpoint + "/:station*", [
-        check("station").isAlpha().isLength({ max: 3 })
+    app.get(endpoint + "/:stationCode*", [
+        check("stationCode").isAlpha().isLength({ max: 3 })
     ], Departure.getAll);
 
 };

@@ -12,19 +12,21 @@ class Stations {
     }
 
     public load = async () => {
-        this.stations = await cache.getAsync("stations");
-        if (this.stations) return JSON.parse(this.stations);
+        let stations = await cache.getAsync("stations");
+        if (stations) this.stations = JSON.parse(stations);
 
-        this.stations = await readFile(`${__dirname}/../config/populate/stations.json`, "utf8");
+        stations = await readFile(`${__dirname}/../config/populate/stations.json`, "utf8");
 
-        await cache.setAsync("stations", this.stations);
+        await cache.setAsync("stations", stations);
 
-        return this.stations;
+        this.stations = JSON.parse(stations);
     }
 
     public getName = (stationCode: string): string => {
         try {
-            return this.stations[stationCode];
+            let stationName = this.stations[stationCode.toUpperCase()];
+            if (!stationName) return stationCode;
+            return stationName;
         } catch (err) {
             return stationCode;
         }

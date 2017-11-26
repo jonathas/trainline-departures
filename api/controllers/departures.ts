@@ -2,6 +2,7 @@ import Validation from "../helpers/validation";
 import Stations from "../helpers/stations";
 import Departure, { IDeparture, IDepartureRequest, IDepartureResponse, IService } from "../models/departure";
 import { formatError } from "../models/error";
+import log from "../config/logger";
 import cache from "../config/cache";
 
 class Departures {
@@ -26,7 +27,7 @@ class Departures {
         if (departureResponse) return <IDepartureResponse>JSON.parse(departureResponse);
 
         let departure = await Departure.getFromAPI(departureRequest);
-        departureResponse = await this.prepareResponse(departure);
+        departureResponse = this.prepareResponse(departure);
 
         await cache.setexAsync(key, 60, JSON.stringify(departureResponse));
 
@@ -40,10 +41,8 @@ class Departures {
         return "departure_" + values.join("_");
     }
 
-    private prepareResponse = async (departure: IDeparture): Promise<Array<IDepartureResponse>> => {
+    private prepareResponse = (departure: IDeparture): Array<IDepartureResponse> => {
         try {
-            await Stations.load();
-
             let departureResponse = <Array<IDepartureResponse>>departure.services.map(service => {
                 return <IDepartureResponse>{
                     serviceIdentifier: service.serviceIdentifier,
@@ -57,7 +56,7 @@ class Departures {
 
             return departureResponse;
         } catch (err) {
-            console.error(err);
+            log.error(err);
         }
     }
 

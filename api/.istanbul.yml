@@ -4,7 +4,7 @@ instrumentation:
     extensions:
         - .js
     default-excludes: true
-    excludes: ["**/server.js", "**/config/**", "**/routes/**"]
+    excludes: ["**/server.js", "**/config/**", "**/routes/**", "**/models/**"]
     embed-source: false
     variable: __coverage__
     compact: true

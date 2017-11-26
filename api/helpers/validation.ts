@@ -1,10 +1,13 @@
 import { validationResult } from "express-validator/check";
+import Station from "./stations";
 import * as moment from "moment";
 
 class Validation {
 
     public static departureRequest(req) {
         validationResult(req).throw();
+
+        Validation.checkStationValid(req.params.stationCode);
 
         if (req.params.date) {
             Validation.checkDateValid(req.params.date);
@@ -20,6 +23,14 @@ class Validation {
 
         if (req.params.desidernumberofservices) {
             Validation.checkDesiredNumberOfServices(req.params.desidernumberofservices);
+        }
+    }
+
+    public static checkStationValid(stationCode: string) {
+        let stationName = Station.getName(stationCode);
+
+        if (stationName === stationCode) {
+            throw new Error("The informed station is invalid");
         }
     }
 

@@ -61,7 +61,7 @@ export = (app) => {
      *
      */
     app.get(endpoint + "/:stationCode*", [
-        check("stationCode").isAlpha().isLength({ max: 3 })
+        check("stationCode").isAlpha().isLength({ min: 3, max: 3 })
     ], Departure.getAll);
 
 };

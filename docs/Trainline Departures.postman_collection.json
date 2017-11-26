@@ -1,0 +1,57 @@
+{
+	"info": {
+		"name": "Trainline Departures",
+		"_postman_id": "1a199a05-ab5b-cc05-281f-1cc77a4d93da",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Departure list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/api/v1/departures/wat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"departures",
+						"wat"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Service list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/api/v1/services/W34824/2017-11-26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"v1",
+						"services",
+						"W34824",
+						"2017-11-26"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

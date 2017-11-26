@@ -9,6 +9,7 @@
         "start": "nodemon bin/server.js"
     },
     "dependencies": {
+        "bluebird": "^3.5.1",
         "body-parser": "^1.18.2",
         "dotenv": "^4.0.0",
         "express": "^4.16.2",
@@ -29,6 +30,8 @@
         "gulp": "^3.9.1",
         "gulp-apidoc": "^0.2.6",
         "gulp-sourcemaps": "^2.6.1",
+        "gulp-typescript": "^3.2.3",
+        "istanbul": "1.0.0-alpha.2",
         "mocha": "^4.0.1",
         "supertest": "^3.0.0",
         "tslint": "^5.8.0",

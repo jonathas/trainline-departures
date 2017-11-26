@@ -1,4 +1,4 @@
-import {request} from "./common";
+import { request } from "./common";
 
 describe("# Not configured routes", () => {
     it("should return 404", (done) => {

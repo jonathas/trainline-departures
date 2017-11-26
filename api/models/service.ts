@@ -28,3 +28,11 @@ export interface IService {
         }]
     };
 }
+
+class Service {
+    static async getByServiceId (serviceId: string): Promise<IService> {
+        return null;
+    }
+}
+
+export default Service;

@@ -1,3 +1,6 @@
+import * as request from "request";
+import cache from "../config/cache";
+
 export interface IDeparture {
     requestId: string;
     queryEarlierServices: string;
@@ -25,6 +28,10 @@ export interface IDeparture {
     }];
 }
 
-const getDepartures = (stationCode: string) => {
+class Departure {
+    static async getByStation(stationCode: string): Promise<IDeparture> {
+        return null;
+    }
+}
 
-};
+export default Departure;

@@ -1,7 +1,14 @@
+import * as moment from "moment";
+import Service from "../models/service";
+
 class Services {
 
-    public async getOne(req, res) {
-        
+    public async getOne(req, res): Promise<void> {
+        try {
+            Service.getByServiceId();
+        } catch (err) {
+            
+        }
     }
 
 }

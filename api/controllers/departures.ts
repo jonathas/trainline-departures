@@ -1,8 +1,13 @@
+import Departure from "../models/departure";
 
 class Departures {
 
-    public async getAll(req, res) {
+    public async getAll(req, res): Promise<void> {
+        try {
+            Departure.getByStation();
+        } catch (err) {
 
+        }
     }
 
 }

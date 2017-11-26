@@ -1,0 +1,234 @@
+[
+    {
+        "serviceIdentifier": "W35073",
+        "platform": "21",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:12:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Weymouth"
+    },
+    {
+        "serviceIdentifier": "W35428",
+        "platform": "17",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:14:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Reading"
+    },
+    {
+        "serviceIdentifier": "W37549",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:16:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Shepperton"
+    },
+    {
+        "serviceIdentifier": "Q75502",
+        "platform": "20",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:19:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Windsor & Eton Riverside"
+    },
+    {
+        "serviceIdentifier": "W34062",
+        "platform": "22",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:25:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Poole"
+    },
+    {
+        "serviceIdentifier": "W34600",
+        "platform": "18",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:40:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Salisbury"
+    },
+    {
+        "serviceIdentifier": "W35434",
+        "platform": "17",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:42:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Reading"
+    },
+    {
+        "serviceIdentifier": "Q64677",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:46:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Shepperton"
+    },
+    {
+        "serviceIdentifier": "W34824",
+        "platform": "20",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T21:54:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Windsor & Eton Riverside"
+    },
+    {
+        "serviceIdentifier": "W34789",
+        "platform": "18",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:03:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Portsmouth Harbour"
+    },
+    {
+        "serviceIdentifier": "W35440",
+        "platform": "17",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:14:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Reading"
+    },
+    {
+        "serviceIdentifier": "W37554",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:16:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Shepperton"
+    },
+    {
+        "serviceIdentifier": "Q75504",
+        "platform": "20",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:19:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Windsor & Eton Riverside"
+    },
+    {
+        "serviceIdentifier": "W34068",
+        "platform": "22",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:25:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Poole"
+    },
+    {
+        "serviceIdentifier": "W35446",
+        "platform": "17",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:42:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Reading"
+    },
+    {
+        "serviceIdentifier": "Q64678",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:46:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Shepperton"
+    },
+    {
+        "serviceIdentifier": "W34828",
+        "platform": "20",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T22:54:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Windsor & Eton Riverside"
+    },
+    {
+        "serviceIdentifier": "W34791",
+        "platform": "18",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:03:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Portsmouth Harbour"
+    },
+    {
+        "serviceIdentifier": "W35452",
+        "platform": "17",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:14:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Reading"
+    },
+    {
+        "serviceIdentifier": "W37560",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:16:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Strawberry Hill"
+    },
+    {
+        "serviceIdentifier": "W37733",
+        "platform": "18",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:30:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Portsmouth Harbour"
+    },
+    {
+        "serviceIdentifier": "W34605",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:40:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Salisbury"
+    },
+    {
+        "serviceIdentifier": "W35459",
+        "platform": "17",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:42:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Reading"
+    },
+    {
+        "serviceIdentifier": "Q75511",
+        "platform": "20",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-26T23:46:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Shepperton"
+    },
+    {
+        "serviceIdentifier": "W36415",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-27T00:01:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Guildford"
+    },
+    {
+        "serviceIdentifier": "W37563",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-27T00:26:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Strawberry Hill"
+    },
+    {
+        "serviceIdentifier": "Q21501",
+        "platform": "19",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-27T00:46:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Strawberry Hill"
+    },
+    {
+        "serviceIdentifier": "W34640",
+        "platform": "18",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-27T00:50:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Portsmouth Harbour"
+    },
+    {
+        "serviceIdentifier": "W34436",
+        "platform": "18",
+        "serviceOperator": "SW",
+        "scheduledTime": "2017-11-27T01:05:00+00:00",
+        "realTimeFlag": "Estimate",
+        "destinationName": "Basingstoke"
+    }
+]

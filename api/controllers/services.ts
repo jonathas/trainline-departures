@@ -5,7 +5,7 @@ import { formatError } from "../models/error";
 
 class Services {
 
-    public async getOne(req, res): Promise<void> {
+    public getOne = async (req, res): Promise<void> => {
         try {
             Validation.serviceRequest(req);
 

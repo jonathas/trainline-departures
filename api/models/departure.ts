@@ -1,6 +1,7 @@
 import * as request from "request";
+import { IError, formatError } from "./error";
 
-interface IService {
+export interface IService {
     serviceIdentifier: string;
     serviceOperator: string;
     transportMode: string;
@@ -21,6 +22,7 @@ interface IService {
 }
 
 export interface IDeparture {
+    errors?: [IError];
     requestId: string;
     queryEarlierServices: string;
     queryLaterServices: string;
@@ -59,6 +61,8 @@ class Departure {
                 if (err) return reject(err);
 
                 let departure = <IDeparture>JSON.parse(response.body);
+                if (departure.errors) return reject(departure.errors);
+
                 departure.services = this.filterServices(departure.services);
 
                 return resolve(departure);
@@ -68,13 +72,17 @@ class Departure {
 
     private getQueryString = (departureRequest: IDepartureRequest) => {
         let queryString = departureRequest.stationCode + "?";
-        let paramsUsed = Object.keys(departureRequest).filter(key => departureRequest[key] !== "");
+        let paramsUsed = Object.keys(departureRequest).filter(key => (departureRequest[key] !== "" && key !== "stationCode"));
         let query = paramsUsed.map(param => param + "=" + departureRequest[param]);
         return queryString + query.join("&");
     }
 
     private filterServices = (services: Array<IService>): Array<IService> => {
         return services.filter(service => service.transportMode === "TRAIN");
+    }
+
+    public getRealTimeFlag = (service: IService) => {
+        return (service.realTimeUpdatesInfo) ? service.realTimeUpdatesInfo.realTimeServiceInfo.realTimeFlag : "";
     }
 
     public assignDepartureRequest = (req): IDepartureRequest => {

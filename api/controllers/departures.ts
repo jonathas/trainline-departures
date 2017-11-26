@@ -1,14 +1,12 @@
 import Validation from "../helpers/validation";
-import Departure, { IDeparture, IDepartureRequest, IDepartureResponse } from "../models/departure";
+import Stations from "../helpers/stations";
+import Departure, { IDeparture, IDepartureRequest, IDepartureResponse, IService } from "../models/departure";
 import { formatError } from "../models/error";
-import * as util from "util";
-import * as fs from "fs";
 import cache from "../config/cache";
-const readFile = util.promisify(fs.readFile);
 
 class Departures {
 
-    public async getAll(req, res): Promise<void> {
+    public getAll = async (req, res): Promise<void> => {
         try {
             Validation.departureRequest(req);
 
@@ -20,18 +18,19 @@ class Departures {
         }
     }
 
-    private getDeparture = async (req): Promise<IDeparture> => {
+    private getDeparture = async (req): Promise<IDepartureResponse> => {
         let departureRequest = Departure.assignDepartureRequest(req);
 
         let key = this.getCacheKey(departureRequest);
-        let departure = await cache.getAsync(key);
-        if (departure) return <IDeparture>JSON.parse(departure);
+        let departureResponse = await cache.getAsync(key);
+        if (departureResponse) return <IDepartureResponse>JSON.parse(departureResponse);
 
-        departure = await this.prepareResponse(await Departure.getFromAPI(departureRequest));
+        let departure = await Departure.getFromAPI(departureRequest);
+        departureResponse = await this.prepareResponse(departure);
 
-        await cache.setexAsync(key, 60, JSON.stringify(departure));
+        await cache.setexAsync(key, 60, JSON.stringify(departureResponse));
 
-        return departure;
+        return departureResponse;
     }
 
     private getCacheKey = (departureRequest: IDepartureRequest): string => {
@@ -43,7 +42,7 @@ class Departures {
 
     private prepareResponse = async (departure: IDeparture): Promise<Array<IDepartureResponse>> => {
         try {
-            const stations = await this.getStations();
+            await Stations.load();
 
             let departureResponse = <Array<IDepartureResponse>>departure.services.map(service => {
                 return <IDepartureResponse>{
@@ -51,25 +50,15 @@ class Departures {
                     platform: service.scheduledInfo.scheduledPlatform,
                     serviceOperator: service.serviceOperator,
                     scheduledTime: service.scheduledInfo.scheduledTime,
-                    realTimeFlag: service.realTimeUpdatesInfo.realTimeServiceInfo.realTimeFlag,
-                    destinationName: stations[service.destinationList[0].crs]
+                    realTimeFlag: Departure.getRealTimeFlag(service),
+                    destinationName: Stations.getName(service.destinationList[0].crs)
                 };
             });
 
             return departureResponse;
         } catch (err) {
-
+            console.error(err);
         }
-    }
-
-    private getStations = async () => {
-        let stations = cache.getAsync("stations");
-        if (stations) return JSON.parse(stations);
-
-        stations = await readFile("../config/populate/stations.json", "utf8");
-        await cache.setAsync("stations", stations);
-
-        return stations;
     }
 
 }

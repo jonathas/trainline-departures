@@ -100,8 +100,7 @@ export = (app) => {
      *
      */
     app.get(endpoint + "/:serviceId/:date", [
-        check("serviceId").isAlphanumeric().isLength({ max: 6 }),
-        check("date").isEmpty()
+        check("serviceId").isAlphanumeric().isLength({ min: 6, max: 6 })
     ], Service.getOne);
 
 };

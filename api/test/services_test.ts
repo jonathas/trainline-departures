@@ -12,8 +12,20 @@ describe("# Services", () => {
             .expect(200);
     });
 
-    it("should return invalid request when the service identifier is badly formatted");
+    it("should return invalid request when the service identifier is badly formatted", () => {
+        return request.get(endpoint + "/W3482@/" + moment().format(process.env.DATE_FORMAT))
+            .set("Accept", "application/json")
+            .expect("Content-Type", /json/)
+            .expect(res => chai.expect(res.body.errors[0].code).to.equal("InvalidRequest"))
+            .expect(400);
+    });
 
-    it("should return invalid request when the date is badly formatted");
+    it("should return invalid request when the date is badly formatted", () => {
+        return request.get(endpoint + "/W34828/abc")
+            .set("Accept", "application/json")
+            .expect("Content-Type", /json/)
+            .expect(res => chai.expect(res.body.errors[0].description).to.equal("The data format is not valid. It should be in the format YYYY-MM-DD"))
+            .expect(400);
+    });
 
 });

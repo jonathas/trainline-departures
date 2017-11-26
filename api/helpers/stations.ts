@@ -11,15 +11,17 @@ class Stations {
         this.load();
     }
 
-    public load = async () => {
-        let stations = await cache.getAsync("stations");
-        if (stations) this.stations = JSON.parse(stations);
+    public load = async (): Promise<void> => {
+        if (!this.stations) {
+            let stations = await cache.getAsync("stations");
+            if (stations) this.stations = JSON.parse(stations);
 
-        stations = await readFile(`${__dirname}/../config/populate/stations.json`, "utf8");
+            stations = await readFile(`${__dirname}/../config/populate/stations.json`, "utf8");
 
-        await cache.setAsync("stations", stations);
+            await cache.setAsync("stations", stations);
 
-        this.stations = JSON.parse(stations);
+            this.stations = JSON.parse(stations);
+        }
     }
 
     public getName = (stationCode: string): string => {

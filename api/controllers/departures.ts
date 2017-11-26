@@ -27,7 +27,7 @@ class Departures {
         if (departureResponse) return <IDepartureResponse>JSON.parse(departureResponse);
 
         let departure = await Departure.getFromAPI(departureRequest);
-        departureResponse = this.prepareResponse(departure);
+        departureResponse = await this.prepareResponse(departure);
 
         await cache.setexAsync(key, 60, JSON.stringify(departureResponse));
 
@@ -41,8 +41,10 @@ class Departures {
         return "departure_" + values.join("_");
     }
 
-    private prepareResponse = (departure: IDeparture): Array<IDepartureResponse> => {
+    private prepareResponse = async (departure: IDeparture): Promise<Array<IDepartureResponse>> => {
         try {
+            await Stations.load();
+
             let departureResponse = <Array<IDepartureResponse>>departure.services.map(service => {
                 return <IDepartureResponse>{
                     serviceIdentifier: service.serviceIdentifier,

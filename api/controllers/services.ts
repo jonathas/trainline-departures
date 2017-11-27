@@ -35,7 +35,9 @@ class Services {
     }
 
     private getCacheKey = (req): string => {
-        return `service_${req.params.serviceId.toUpperCase().trim()}_${req.params.date.split("-").join("")}`;
+        let formattedServiceId = req.params.serviceId.toUpperCase().trim();
+        let formattedDate = moment(req.params.date, process.env.DATE_FORMAT).format("YYYYMMDD");
+        return `service_${formattedServiceId}_${formattedDate}`;
     }
 
     private prepareResponse = async (serviceObj: IService): Promise<IServiceResponse> => {
@@ -56,7 +58,8 @@ class Services {
 
             return serviceResponse;
         } catch (err) {
-            log.error(err);
+            /* istanbul ignore next */
+            throw new Error(err);
         }
     }
 

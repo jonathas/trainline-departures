@@ -1,3 +1,5 @@
+import log from "../config/logger";
+
 export interface IError {
     errors: [{
         code: string;
@@ -6,6 +8,7 @@ export interface IError {
 }
 
 class APIError {
+
     static returnError = (res, err) => {
         let error = {
             code: "",
@@ -23,10 +26,13 @@ class APIError {
             error.description = err[0].description;
         }
 
+        log.error(error, "APIError");
+
         res.status(status).json({
             errors: [error]
         });
     }
+
 }
 
 export default APIError;

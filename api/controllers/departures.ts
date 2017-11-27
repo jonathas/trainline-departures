@@ -38,7 +38,7 @@ class Departures {
         let paramsUsed = Object.keys(departureRequest).filter(key => departureRequest[key] !== "");
         let values = paramsUsed.map(param => departureRequest[param]);
 
-        return "departure_" + values.join("_");
+        return "departures_" + values.join("_");
     }
 
     private prepareResponse = async (departure: IDeparture): Promise<Array<IDepartureResponse>> => {
@@ -58,7 +58,8 @@ class Departures {
 
             return departureResponse;
         } catch (err) {
-            log.error(err);
+            /* istanbul ignore next */
+            throw Error(err);
         }
     }
 

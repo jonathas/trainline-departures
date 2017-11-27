@@ -1,4 +1,5 @@
 import { request, chai } from "./common";
+import cache from "../config/cache";
 import Departure from "../models/departure";
 import * as sinon from "sinon";
 import * as util from "util";
@@ -9,6 +10,7 @@ describe("# Departures", () => {
     const endpoint = process.env.API_BASE + "departures";
 
     before(async () => {
+        await cache.delAsync("departures_wat");
         const departures = await readFile(`${__dirname}/mock/departures.json`, "utf8");
         return sinon.stub(Departure, "getFromAPI").resolves(JSON.parse(departures));
     });
@@ -18,7 +20,14 @@ describe("# Departures", () => {
             .set("Accept", "application/json")
             .expect("Content-Type", /json/)
             .expect(res => chai.expect(res.body).to.have.length.of.at.least(1))
-            .expect(200);
+            .expect(200)
+            .then(res => {
+                return request.get(endpoint + "/wat") // get from cache this time
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(res => chai.expect(res.body).to.have.length.of.at.least(1))
+                    .expect(200);
+            });
     });
 
     it("should return invalid request when an invalid station code is informed", () => {
@@ -59,6 +68,14 @@ describe("# Departures", () => {
             .expect("Content-Type", /json/)
             .expect(res => chai.expect(res.body.errors[0].description).to.equal("The desired number of services has to be a positive number and can\'t be higher than 100"))
             .expect(400);
+    });
+
+    it("should return the departures with the correct desired number of services", () => {
+        return request.get(endpoint + "/BGN?date=2017-11-27&time=12:30&expectedwindow=302&desirednumberofservices=50")
+            .set("Accept", "application/json")
+            .expect("Content-Type", /json/)
+            .expect(res => chai.expect(res.body).to.have.length.of.at.least(1))
+            .expect(200);
     });
 
     it("should return invalid parameter value when the station code is badly formatted", () => {

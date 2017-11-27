@@ -1,3 +1,5 @@
+import log from "../config/logger";
+
 export = (app) => {
 
     require("./departures")(app);
@@ -15,6 +17,9 @@ export = (app) => {
         if (process.env.NODE_ENV === "production") {
             return res.status(500).json({ "error": "Unexpected error: " + error });
         }
+
+        log.error(error, "Unexpected error");
+
         next(error);
     });
 

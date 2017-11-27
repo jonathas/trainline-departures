@@ -14,6 +14,7 @@ class Stations {
     public load = async (): Promise<void> => {
         if (!this.stations) {
             let stations = await cache.getAsync("stations");
+            /* istanbul ignore next */
             if (stations) this.stations = JSON.parse(stations);
 
             stations = await readFile(`${__dirname}/../config/populate/stations.json`, "utf8");
@@ -25,13 +26,9 @@ class Stations {
     }
 
     public getName = (stationCode: string): string => {
-        try {
-            let stationName = this.stations[stationCode.toUpperCase()];
-            if (!stationName) return stationCode;
-            return stationName;
-        } catch (err) {
-            return stationCode;
-        }
+        let stationName = this.stations[stationCode.toUpperCase()];
+        if (!stationName) return stationCode;
+        return stationName;
     }
 
 }

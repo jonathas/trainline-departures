@@ -47,14 +47,12 @@ class Validation {
     }
 
     public static checkExpectedWindow(expectedWindow: number) {
-        // Should be numeric and have 3 characters
         if (!(/^-{0,1}\d{2,3}$/.test(expectedWindow.toString()))) {
             throw new Error("The expected window should be a number and have 2 or 3 characters");
         }
     }
 
     public static checkDesiredNumberOfServices(numServices: number) {
-        // Should be numeric, not negative and max 100
         if (!(/^\d{1,3}$/.test(numServices.toString())) || numServices <= 0 || numServices > 100) {
             throw new Error("The desired number of services has to be a positive number and can't be higher than 100");
         }
@@ -62,12 +60,8 @@ class Validation {
 
     public static serviceRequest(req) {
         validationResult(req).throw();
-
-        if (req.params.date) {
-            Validation.checkDateValid(req.params.date);
-        }
+        Validation.checkDateValid(req.params.date);
     }
-
 
 }
 

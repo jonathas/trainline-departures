@@ -1,4 +1,5 @@
 import { request, chai } from "./common";
+import cache from "../config/cache";
 import Service from "../models/service";
 import * as sinon from "sinon";
 import * as util from "util";
@@ -9,16 +10,24 @@ describe("# Services", () => {
     const endpoint = process.env.API_BASE + "services";
 
     before(async () => {
-        const services = await readFile(`${__dirname}/mock/service.json`, "utf8");
-        return sinon.stub(Service, "getFromAPI").resolves(JSON.parse(services));
+        await cache.delAsync("service_P75126_20171126");
+        const service = await readFile(`${__dirname}/mock/service.json`, "utf8");
+        return sinon.stub(Service, "getFromAPI").resolves(JSON.parse(service));
     });
 
     it("should return the service", () => {
-        return request.get(`${endpoint}/P75126/2017-11-26}`)
+        return request.get(`${endpoint}/P75126/2017-11-26`)
             .set("Accept", "application/json")
             .expect("Content-Type", /json/)
             .expect(res => chai.expect(res.body.stops).to.have.length.of.at.least(1))
-            .expect(200);
+            .expect(200)
+            .then(res => {
+                return request.get(`${endpoint}/P75126/2017-11-26`) // get from cache this time
+                    .set("Accept", "application/json")
+                    .expect("Content-Type", /json/)
+                    .expect(res => chai.expect(res.body.stops).to.have.length.of.at.least(1))
+                    .expect(200);
+            });
     });
 
     it("should return invalid request when the service identifier is badly formatted", () => {

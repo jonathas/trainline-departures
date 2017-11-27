@@ -81,8 +81,12 @@ class Departure {
         return services.filter(service => service.transportMode === "TRAIN");
     }
 
-    public getRealTimeFlag = (service: IService) => {
-        return (service.realTimeUpdatesInfo) ? service.realTimeUpdatesInfo.realTimeServiceInfo.realTimeFlag : "";
+    public getRealTimeFlag = (service: IService): string => {
+        try {
+            return (service.realTimeUpdatesInfo) ? service.realTimeUpdatesInfo.realTimeServiceInfo.realTimeFlag : "";
+        } catch (err) {
+            return "";
+        }
     }
 
     public assignRequest = (req): IDepartureRequest => {

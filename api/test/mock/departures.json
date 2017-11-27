@@ -1,0 +1,1025 @@
+{
+    "requestId": "vas6bs4wq0udnThTGhggeA",
+    "queryEarlierServices": "https://realtime.thetrainline.com/Departures/WAT?Date=2017-11-27&Time=21:44&ExpectedWindow=-84&DesiredNumberOfServices=50",
+    "queryLaterServices": "https://realtime.thetrainline.com/Departures/WAT?Date=2017-11-27&Time=23:10&DesiredNumberOfServices=50",
+    "realTimeDataSourceAvailable": true,
+    "timestamp": "2017-11-27T21:45:00+00:00",
+    "services": [
+        {
+            "serviceIdentifier": "W31073",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:45:00+00:00",
+                "scheduledPlatform": "18"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "TWI"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:45:00+00:00",
+                    "realTimePlatform": "18",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W31073/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37722",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:45:00+00:00",
+                "scheduledPlatform": "10"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "PMS"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:45:00+00:00",
+                    "realTimePlatform": "10",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37722/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37270",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:47:00+00:00",
+                "scheduledPlatform": "3"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "CSS"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:47:00+00:00",
+                    "realTimePlatform": "3",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37270/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35432",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:50:00+00:00",
+                "scheduledPlatform": "20"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "RDG"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:58:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35432/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35964",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:50:00+00:00",
+                "scheduledPlatform": "2"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "GLD"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:50:00+00:00",
+                    "realTimePlatform": "2",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35964/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W38058",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:52:00+00:00",
+                "scheduledPlatform": "17"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WYB"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:52:00+00:00",
+                    "realTimePlatform": "17",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W38058/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W33994",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:53:00+00:00",
+                "scheduledPlatform": "14"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "AON"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:53:00+00:00",
+                    "realTimePlatform": "14",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W33994/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35646",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:54:00+00:00",
+                "scheduledPlatform": "1"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "EPS"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35646/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36893",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:57:00+00:00",
+                "scheduledPlatform": "4"
+            },
+            "callingType": "SetDown",
+            "destinationList": [
+                {
+                    "crs": "WAT"
+                }
+            ],
+            "circularRoute": true,
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:57:00+00:00",
+                    "realTimePlatform": "4",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36893/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W38277",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T21:58:00+00:00",
+                "scheduledPlatform": "18"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WNR"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T21:58:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W38277/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34782",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:00:00+00:00",
+                "scheduledPlatform": "7"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "PMH"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34782/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "Z03266",
+            "serviceOperator": "ZZ",
+            "transportMode": "BUS",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:00:00+00:00"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "XTH"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/Z03266/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "Z03269",
+            "serviceOperator": "ZZ",
+            "transportMode": "BUS",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:00:00+00:00"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "XTH"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/Z03269/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36395",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:03:00+00:00",
+                "scheduledPlatform": "3"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "GLD"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:03:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36395/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37552",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:03:00+00:00",
+                "scheduledPlatform": "19"
+            },
+            "callingType": "SetDown",
+            "destinationList": [
+                {
+                    "crs": "WAT"
+                }
+            ],
+            "circularRoute": true,
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:03:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37552/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34064",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:05:00+00:00",
+                "scheduledPlatform": "8"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "POO"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:05:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34064/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34224",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:09:00+00:00",
+                "scheduledPlatform": "2"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "DKG"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34224/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36576",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:12:00+00:00",
+                "scheduledPlatform": "1"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "SHP"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:12:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36576/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37069",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:12:00+00:00",
+                "scheduledPlatform": "12"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "BSK"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:12:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37069/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34598",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:20:00+00:00",
+                "scheduledPlatform": "7"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "SAL"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34598/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35438",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:20:00+00:00",
+                "scheduledPlatform": "20"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "RDG"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35438/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35970",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:20:00+00:00",
+                "scheduledPlatform": "3"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WOK"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:20:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35970/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "Z03270",
+            "serviceOperator": "ZZ",
+            "transportMode": "BUS",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:20:00+00:00"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "XTH"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/Z03270/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W38062",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:22:00+00:00",
+                "scheduledPlatform": "17"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WYB"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:22:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W38062/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W33998",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:23:00+00:00",
+                "scheduledPlatform": "14"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "AON"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:23:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W33998/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36895",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:27:00+00:00",
+                "scheduledPlatform": "2"
+            },
+            "callingType": "SetDown",
+            "destinationList": [
+                {
+                    "crs": "WAT"
+                }
+            ],
+            "circularRoute": true,
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:27:00+00:00",
+                    "realTimePlatform": "2",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36895/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W38282",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:28:00+00:00",
+                "scheduledPlatform": "16"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WNR"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:28:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W38282/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34787",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:30:00+00:00",
+                "scheduledPlatform": "11"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "PMH"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:30:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34787/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W31174",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:33:00+00:00",
+                "scheduledPlatform": "19"
+            },
+            "callingType": "SetDown",
+            "destinationList": [
+                {
+                    "crs": "WAT"
+                }
+            ],
+            "circularRoute": true,
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:33:00+00:00",
+                    "realTimePlatform": "19",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W31174/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36400",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:33:00+00:00",
+                "scheduledPlatform": "1"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "GLD"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:33:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36400/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34066",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:35:00+00:00",
+                "scheduledPlatform": "10"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "POO"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34066/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34430",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:36:00+00:00",
+                "scheduledPlatform": "3"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "HMC"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:36:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34430/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35227",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:39:00+00:00",
+                "scheduledPlatform": "15"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "SOU"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:39:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35227/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35653",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:39:00+00:00",
+                "scheduledPlatform": "6"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "GLD"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35653/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "Z03271",
+            "serviceOperator": "ZZ",
+            "transportMode": "BUS",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:40:00+00:00"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "XTH"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/Z03271/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36581",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:42:00+00:00",
+                "scheduledPlatform": "4"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "SHP"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:42:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36581/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37075",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:42:00+00:00",
+                "scheduledPlatform": "9"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "BSK"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37075/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37728",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:45:00+00:00",
+                "scheduledPlatform": "7"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "PMS"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37728/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35444",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:50:00+00:00",
+                "scheduledPlatform": "20"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "RDG"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:50:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35444/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W35976",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:50:00+00:00",
+                "scheduledPlatform": "2"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WOK"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:50:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W35976/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34826",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:52:00+00:00",
+                "scheduledPlatform": "16"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WOK"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:52:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34826/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34002",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:53:00+00:00",
+                "scheduledPlatform": "13"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "AON"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34002/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36899",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:57:00+00:00",
+                "scheduledPlatform": "1"
+            },
+            "callingType": "SetDown",
+            "destinationList": [
+                {
+                    "crs": "WAT"
+                }
+            ],
+            "circularRoute": true,
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:57:00+00:00",
+                    "realTimePlatform": "1",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36899/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W38287",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T22:58:00+00:00",
+                "scheduledPlatform": "18"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "WNR"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T22:58:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W38287/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37278",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T23:00:00+00:00",
+                "scheduledPlatform": "5"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "CSS"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T23:00:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37278/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "Z03272",
+            "serviceOperator": "ZZ",
+            "transportMode": "BUS",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T23:00:00+00:00"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "XTH"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/Z03272/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W36405",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T23:03:00+00:00",
+                "scheduledPlatform": "2"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "GLD"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T23:03:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W36405/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W37558",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T23:03:00+00:00",
+                "scheduledPlatform": "19"
+            },
+            "callingType": "SetDown",
+            "destinationList": [
+                {
+                    "crs": "WAT"
+                }
+            ],
+            "circularRoute": true,
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T23:03:00+00:00",
+                    "realTimePlatform": "19",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W37558/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34070",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T23:05:00+00:00",
+                "scheduledPlatform": "12"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "POO"
+                }
+            ],
+            "realTimeUpdatesInfo": {
+                "realTimeServiceInfo": {
+                    "realTime": "2017-11-27T23:05:00+00:00",
+                    "realTimeFlag": "Estimate"
+                }
+            },
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34070/2017-11-27"
+        },
+        {
+            "serviceIdentifier": "W34230",
+            "serviceOperator": "SW",
+            "transportMode": "TRAIN",
+            "scheduledInfo": {
+                "scheduledTime": "2017-11-27T23:09:00+00:00",
+                "scheduledPlatform": "3"
+            },
+            "callingType": "PickUp",
+            "destinationList": [
+                {
+                    "crs": "DKG"
+                }
+            ],
+            "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/W34230/2017-11-27"
+        }
+    ]
+}

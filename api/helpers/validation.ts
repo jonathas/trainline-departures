@@ -9,20 +9,20 @@ class Validation {
 
         Validation.checkStationValid(req.params.stationCode);
 
-        if (req.params.date) {
-            Validation.checkDateValid(req.params.date);
+        if (req.query.date) {
+            Validation.checkDateValid(req.query.date);
         }
 
-        if (req.params.time) {
-            Validation.checkTimeValid(req.params.time);
+        if (req.query.time) {
+            Validation.checkTimeValid(req.query.time);
         }
 
-        if (req.params.expectedwindow) {
-            Validation.checkExpectedWindow(req.params.expectedwindow);
+        if (req.query.expectedwindow) {
+            Validation.checkExpectedWindow(req.query.expectedwindow);
         }
 
-        if (req.params.desidernumberofservices) {
-            Validation.checkDesiredNumberOfServices(req.params.desidernumberofservices);
+        if (req.query.desirednumberofservices) {
+            Validation.checkDesiredNumberOfServices(req.query.desirednumberofservices);
         }
     }
 

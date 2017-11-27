@@ -20,7 +20,8 @@
         "moment": "^2.19.2",
         "pino": "^4.10.2",
         "redis": "^2.8.0",
-        "request": "^2.83.0"
+        "request": "^2.83.0",
+        "sinon": "^4.1.2"
     },
     "devDependencies": {
         "@types/chai": "^4.0.5",
@@ -31,6 +32,7 @@
         "@types/pino": "^4.7.0",
         "@types/redis": "^2.8.1",
         "@types/request": "^2.0.8",
+        "@types/sinon": "^4.0.0",
         "@types/superagent": "^3.5.6",
         "chai": "^4.1.2",
         "gulp": "^3.9.1",

@@ -1,0 +1,280 @@
+{
+    "requestId": "Kxs0Ot84tUKlcKnPuSS75Q",
+    "isRealTimeDataAvailable": false,
+    "service": {
+        "serviceUid": "P75126",
+        "serviceOperator": "AW",
+        "transportMode": "TRAIN",
+        "serviceOrigins": [
+            "CDF"
+        ],
+        "serviceDestinations": [
+            "MFH"
+        ],
+        "stops": [
+            {
+                "location": {
+                    "crs": "CDF"
+                },
+                "arrival": {
+                    "notApplicable": true
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:13:00+00:00",
+                        "scheduledPlatform": "7"
+                    }
+                },
+                "callingType": "PickUp"
+            },
+            {
+                "location": {
+                    "crs": "BGN"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:32:00+00:00",
+                        "scheduledPlatform": "1"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:33:00+00:00",
+                        "scheduledPlatform": "1"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "PYL"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:41:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:41:00+00:00"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "PTA"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:49:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:49:00+00:00"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "NTH"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:57:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T20:57:00+00:00"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "SWA"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:10:00+00:00",
+                        "scheduledPlatform": "3"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:18:00+00:00",
+                        "scheduledPlatform": "3"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "GWN"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:29:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:29:00+00:00"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "LLE"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:36:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:37:00+00:00"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "PBY"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:43:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T21:43:00+00:00"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "CMN"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:06:00+00:00",
+                        "scheduledPlatform": "1"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:10:00+00:00",
+                        "scheduledPlatform": "1"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "WTL"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:26:00+00:00",
+                        "scheduledPlatform": "2"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:26:00+00:00",
+                        "scheduledPlatform": "2"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "CUW"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:34:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:34:00+00:00"
+                    }
+                },
+                "callingType": "Request"
+            },
+            {
+                "location": {
+                    "crs": "CLR"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:42:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:42:00+00:00"
+                    }
+                },
+                "callingType": "Request"
+            },
+            {
+                "location": {
+                    "crs": "HVF"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:50:00+00:00",
+                        "scheduledPlatform": "1"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:50:00+00:00",
+                        "scheduledPlatform": "1"
+                    }
+                },
+                "callingType": "Normal"
+            },
+            {
+                "location": {
+                    "crs": "JOH"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:59:00+00:00"
+                    }
+                },
+                "departure": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T22:59:00+00:00"
+                    }
+                },
+                "callingType": "Request"
+            },
+            {
+                "location": {
+                    "crs": "MFH"
+                },
+                "arrival": {
+                    "scheduled": {
+                        "scheduledTime": "2017-11-26T23:10:00+00:00"
+                    }
+                },
+                "departure": {
+                    "notApplicable": true
+                },
+                "callingType": "SetDown"
+            }
+        ]
+    }
+}

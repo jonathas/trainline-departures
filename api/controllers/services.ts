@@ -26,6 +26,7 @@ class Services {
         if (serviceResponse) return <IServiceResponse>JSON.parse(serviceResponse);
 
         let service = await Service.getFromAPI(req.params.serviceId, req.params.date);
+
         serviceResponse = await this.prepareResponse(service);
 
         await cache.setexAsync(key, 60, JSON.stringify(serviceResponse));

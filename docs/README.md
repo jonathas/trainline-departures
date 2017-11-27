@@ -30,5 +30,6 @@ Provide an endpoint for the selected service that lists the calling pattern for 
 
 ## Questions for the interview
 
-How do you manage configuration - we have a development version of the realtime API we should use for CI builds
-How do you manage node process when the service is deployed
+How do you manage configuration? - We have a development version of the realtime API we should use for CI.
+
+How do you manage node process when the service is deployed?

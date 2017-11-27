@@ -64,10 +64,14 @@ class Service {
             request(options, (err, response, body) => {
                 if (err) return reject(err);
 
-                let service = <IService>JSON.parse(response.body);
-                if (service.errors) return reject(service.errors);
+                let serviceResponse = <IService>JSON.parse(response.body);
+                if (serviceResponse.errors) return reject(serviceResponse.errors);
 
-                return resolve(service);
+                if (serviceResponse.service.transportMode !== "TRAIN") {
+                    throw new Error("The service you are looking for is not of the TRAIN type");
+                }
+
+                return resolve(serviceResponse);
             });
         });
     }

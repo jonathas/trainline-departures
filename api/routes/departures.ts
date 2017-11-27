@@ -26,38 +26,32 @@ export = (app) => {
      *
      * @apiSuccessExample {json} Success response:
      *     HTTP 200 OK
-     *      {
-     *      "requestId": "XUo2nmzcaU2tbjwaMeUDvg",
-     *      "queryEarlierServices": "https://realtime.thetrainline.com/Departures/BGN?Date=2017-11-26&Time=14:16&ExpectedWindow=-360&DesiredNumberOfServices=50",
-     *      "queryLaterServices": "https://realtime.thetrainline.com/Departures/BGN?Date=2017-11-27&Time=07:40&DesiredNumberOfServices=50",
-     *      "realTimeDataSourceAvailable": true,
-     *      "timestamp": "2017-11-26T14:17:00+00:00",
-     *      "services": [
+     *      [
      *          {
-     *          "serviceIdentifier": "P75609",
-     *          "serviceOperator": "AW",
-     *          "transportMode": "TRAIN",
-     *          "scheduledInfo": {
-     *              "scheduledTime": "2017-11-26T14:17:00+00:00",
-     *              "scheduledPlatform": "2"
+     *              "serviceIdentifier": "W38293",
+     *              "platform": "16",
+     *              "serviceOperator": "SW",
+     *              "scheduledTime": "2017-11-27T23:28:00+00:00",
+     *              "realTimeFlag": "Estimate",
+     *              "destinationName": "Windsor & Eton Riverside"
      *          },
-     *          "callingType": "Normal",
-     *          "destinationList": [
-     *              {
-     *              "crs": "MAN"
-     *             }
-     *          ],
-     *          "realTimeUpdatesInfo": {
-     *              "realTimeServiceInfo": {
-     *              "realTime": "2017-11-26T14:17:00+00:00",
-     *              "realTimePlatform": "2",
-     *              "realTimeFlag": "Estimate"
-     *              }
+     *          {
+     *              "serviceIdentifier": "W37561",
+     *              "platform": "19",
+     *              "serviceOperator": "SW",
+     *              "scheduledTime": "2017-11-27T23:33:00+00:00",
+     *              "realTimeFlag": "Estimate",
+     *              "destinationName": "Kingston"
      *          },
-     *          "callingPatternUrl": "https://realtime.thetrainline.com/callingPattern/P75609/2017-11-26"
+     *          {
+     *              "serviceIdentifier": "W35232",
+     *              "platform": "11",
+     *              "serviceOperator": "SW",
+     *              "scheduledTime": "2017-11-27T23:35:00+00:00",
+     *              "realTimeFlag": "Estimate",
+     *              "destinationName": "Southampton Central"
      *          }
      *      ]
-     *      }
      *
      */
     app.get(endpoint + "/:stationCode*", [

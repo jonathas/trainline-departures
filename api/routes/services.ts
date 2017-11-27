@@ -23,79 +23,128 @@ export = (app) => {
      *
      * @apiSuccessExample {json} Success response:
      *     HTTP 200 OK
-     *     {
-     *      "requestId": "fltDA7q/j0KAwYgFHRobPg",
-     *      "isRealTimeDataAvailable": true,
-     *      "service": {
-     *          "serviceUid": "W34807",
+     *      {
+     *          "originName": "London Waterloo",
+     *          "destinationName": "Windsor & Eton Riverside",
      *          "serviceOperator": "SW",
-     *          "transportMode": "TRAIN",
-     *          "serviceOrigins": [
-     *          "WNR"
-     *          ],
-     *          "serviceDestinations": [
-     *          "WAT"
-     *         ],
      *          "stops": [
-     *                  {
-     *                      "location": {
-     *                      "crs": "WNR"
-     *                      },
-     *                      "arrival": {
-     *                      "notApplicable": true
-     *                      },
-     *                      "departure": {
-     *                       "scheduled": {
-     *                          "scheduledTime": "2017-11-26T13:40:00+00:00",
-     *                          "scheduledPlatform": "1"
-     *                      },
-     *                      "realTime": {
-     *                          "realTimeServiceInfo": {
-     *                          "hasDeparted": true,
-     *                          "realTime": "2017-11-26T13:40:00+00:00",
-     *                          "realTimePlatform": "1",
-     *                          "realTimeFlag": "Actual"
-     *                          }
-     *                      }
-     *                      },
-     *                      "callingType": "PickUp"
+     *              {
+     *                  "location": {
+     *                      "crs": "WAT",
+     *                      "name": "London Waterloo"
      *                  },
-     *                  {
-     *                      "location": {
-     *                      "crs": "DAT"
-     *                      },
-     *                      "arrival": {
+     *                  "arrival": {
+     *                      "notApplicable": true
+     *                  },
+     *                  "departure": {
      *                      "scheduled": {
-     *                          "scheduledTime": "2017-11-26T13:43:00+00:00",
+     *                          "scheduledTime": "2017-11-27T23:28:00+00:00",
+     *                          "scheduledPlatform": "16"
+     *                      },
+     *                      "realTime": {
+     *                          "realTimeServiceInfo": {
+     *                              "hasDeparted": true,
+     *                              "realTime": "2017-11-27T23:28:00+00:00",
+     *                              "realTimePlatform": "18",
+     *                              "realTimeFlag": "Actual"
+     *                          }
+     *                      }
+     *                  },
+     *                 "callingType": "PickUp"
+     *              },
+     *              {
+     *                  "location": {
+     *                      "crs": "VXH",
+     *                      "name": "Vauxhall"
+     *                  },
+     *                  "arrival": {
+     *                      "scheduled": {
+     *                          "scheduledTime": "2017-11-27T23:32:00+00:00"
+     *                      },
+     *                      "realTime": {
+     *                          "realTimeServiceInfo": {
+     *                              "hasArrived": false,
+     *                              "realTime": "2017-11-27T23:32:00+00:00",
+     *                              "realTimePlatform": "3",
+     *                              "realTimeFlag": "Estimate"
+     *                          }
+     *                      }
+     *                  },
+     *                  "departure": {
+     *                      "scheduled": {
+     *                          "scheduledTime": "2017-11-27T23:32:00+00:00"
+     *                      },
+     *                      "realTime": {
+     *                          "realTimeServiceInfo": {
+     *                              "hasDeparted": false,
+     *                              "realTime": "2017-11-27T23:32:00+00:00",
+     *                              "realTimePlatform": "3",
+     *                              "realTimeFlag": "Estimate"
+     *                          }
+     *                      }
+     *                  },
+     *                  "callingType": "Normal"
+     *              },
+     *              {
+     *                  "location": {
+     *                      "crs": "CLJ",
+     *                      "name": "Clapham Junction"
+     *                  },
+     *                  "arrival": {
+     *                      "scheduled": {
+     *                          "scheduledTime": "2017-11-27T23:37:00+00:00",
+     *                          "scheduledPlatform": "6"
+     *                      },
+     *                      "realTime": {
+     *                          "realTimeServiceInfo": {
+     *                              "hasArrived": false,
+     *                              "realTime": "2017-11-27T23:37:00+00:00",
+     *                              "realTimePlatform": "6",
+     *                              "realTimeFlag": "Estimate"
+     *                          }
+     *                      }
+     *                  },
+     *                  "departure": {
+     *                      "scheduled": {
+     *                          "scheduledTime": "2017-11-27T23:38:00+00:00",
+     *                          "scheduledPlatform": "6"
+     *                      },
+     *                      "realTime": {
+     *                          "realTimeServiceInfo": {
+     *                              "hasDeparted": false,
+     *                              "realTime": "2017-11-27T23:38:00+00:00",
+     *                              "realTimePlatform": "6",
+     *                              "realTimeFlag": "Estimate"
+     *                          }
+     *                      }
+     *                  },
+     *                  "callingType": "Normal"
+     *              },
+     *              {
+     *                  "location": {
+     *                      "crs": "WNR",
+     *                      "name": "Windsor & Eton Riverside"
+     *                  },
+     *                  "arrival": {
+     *                      "scheduled": {
+     *                          "scheduledTime": "2017-11-28T00:25:00+00:00",
      *                          "scheduledPlatform": "1"
      *                      },
      *                      "realTime": {
      *                          "realTimeServiceInfo": {
-     *                          "hasArrived": true,
-     *                          "realTime": "2017-11-26T13:43:00+00:00",
-     *                          "realTimePlatform": "1",
-     *                          "realTimeFlag": "Actual"
+     *                              "hasArrived": false,
+     *                              "realTime": "2017-11-28T00:25:00+00:00",
+     *                              "realTimePlatform": "1",
+     *                              "realTimeFlag": "Estimate"
      *                          }
      *                      }
-     *                      },
-     *                      "departure": {
-     *                      "scheduled": {
-     *                          "scheduledTime": "2017-11-26T13:44:00+00:00",
-     *                          "scheduledPlatform": "1"
-     *                      },
-     *                      "realTime": {
-     *                          "realTimeServiceInfo": {
-     *                          "hasDeparted": true,
-     *                          "realTime": "2017-11-26T13:44:00+00:00",
-     *                          "realTimePlatform": "1",
-     *                          "realTimeFlag": "Estimate"
-     *                          }
-     *                      }
-     *                      },
-     *                      "callingType": "Normal"
-     *                  }
-     *              ]
-     *          }
+     *                  },
+     *                  "departure": {
+     *                      "notApplicable": true
+     *                  },
+     *                  "callingType": "SetDown"
+     *              }
+     *          ]
      *      }
      *
      */

@@ -1,7 +1,7 @@
 {
     "name": "Trainline departures API",
     "version": "1.0.0",
-    "description": "Trainline departures API",
+    "description": "An API that returns the train services in order for the customers to view live departure information",
     "title": "Trainline departures API",
     "url": "http://localhost"
 }

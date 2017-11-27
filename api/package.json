@@ -9,7 +9,8 @@
         "pretest": "gulp",
         "test": "istanbul cover node_modules/mocha/bin/_mocha",
         "prestart": "gulp",
-        "start": "nodemon bin/server.js"
+        "start": "nodemon bin/server.js",
+        "docs": "gulp apidoc"
     },
     "dependencies": {
         "bluebird": "^3.5.1",

@@ -8,12 +8,18 @@
 
 Node.js, ES7, TypeScript, Express, pm2, Redis, Nginx, Docker, apiDoc, mocha, sinon, istanbul.
 
+### Dependencies
+
+- Docker
+- docker-compose
+- yarn
+
 ### Before anything
 
-Install the packages by entering the api directory and running:
+Install the packages and build by entering the api directory and running:
 
 ```bash
-yarn
+yarn && yarn build
 ```
 
 ### Testing the API and checking the code coverage

@@ -68,4 +68,5 @@ docker exec -it trainline_api pm2 reload all
 
 ## Further improvements
 
+- Get list of train operators, as a link wasn't given for that, and match it with the operator codes to return the real names
 - Configure log management on AWS CloudWatch

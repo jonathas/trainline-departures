@@ -44,7 +44,7 @@ For developing new functionalities, you can use nodemon, pm2 or the pm2 docker i
 docker-compose -f docker-dev.yml up
 ```
 
-This will start the Nginx and pm2 containers. This pm2 container is configured for reloading the code every time it is modified.
+This will start the Nginx, Redis and pm2 containers. This pm2 container is configured for reloading the code every time it is modified.
 
 ### Deploying
 

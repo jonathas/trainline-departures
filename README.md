@@ -2,7 +2,7 @@
 
 ## An API that returns the train services in order for the customers to view live departure information
 
-![alt text](https://github.com/trainlinerecruitment/repo_be_vp_for_contact-jonathas.com/docs/blob/master/trainline.jpg "Train")
+![alt text](docs/trainline.jpg "Train")
 
 ### Technologies used
 

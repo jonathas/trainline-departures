@@ -4,11 +4,11 @@ Design a back-end API in node that can be consumed by a front-end in order to di
 
 Provide an endpoint for departures that requests a list of departures from our real-time API, e.g. [https://realtime.thetrainline.com/departures/wat](https://realtime.thetrainline.com/departures/wat), given the following mockup from the designers
 
-![List of departure services](list-of-departures-from.png "List of departure services")
+![List of departure services](mockups/list-of-departures-from.png "List of departure services")
 
 Provide an endpoint for the selected service that lists the calling pattern for that service, with all required data given the following mockup from the designers
 
-![Calling pattern for a service](calling-pattern.png "Calling pattern for a service")
+![Calling pattern for a service](mockups/calling-pattern.png "Calling pattern for a service")
 
 ## For each
 

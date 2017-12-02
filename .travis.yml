@@ -5,3 +5,5 @@ node_js:
         - "8"
         - "8.1.3"
 services: redis-server
+after_script:
+- "bash ./coveralls.sh"

@@ -2,7 +2,7 @@
 
 ## An API that returns the train services in order for the customers to view live departure information
 
-[![Build Status](https://travis-ci.org/jonathas/trainline-departures.svg?branch=master)](https://travis-ci.org/jonathas/trainline-departures)
+[![Build Status](https://travis-ci.org/jonathas/trainline-departures.svg?branch=master)](https://travis-ci.org/jonathas/trainline-departures) [![Coverage Status](https://coveralls.io/repos/github/jonathas/trainline-departures/badge.svg?branch=master)](https://coveralls.io/github/jonathas/trainline-departures?branch=master)
 
 ![alt text](docs/trainline.jpg "Train")
 

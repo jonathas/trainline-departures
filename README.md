@@ -2,6 +2,8 @@
 
 ## An API that returns the train services in order for the customers to view live departure information
 
+[![Build Status](https://travis-ci.org/jonathas/trainline-departures.svg?branch=master)](https://travis-ci.org/jonathas/trainline-departures)
+
 ![alt text](docs/trainline.jpg "Train")
 
 ### Technologies used

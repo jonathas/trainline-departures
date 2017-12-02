@@ -1,4 +1,4 @@
-# Node.js Developer
+# About the API
 
 Design a back-end API in node that can be consumed by a front-end in order to display train services in order for our customers to view live departure information on a mobile website.
 
@@ -18,7 +18,7 @@ Provide an endpoint for the selected service that lists the calling pattern for 
 - Include only services where transport mode is TRAIN
 - Access to the API is not free - identify opportunities to cache
 
-## We'll be looking for
+## Important to have
 
 - Appropriate HTTP status codes for errors
 - Appropriate request validation
@@ -28,8 +28,3 @@ Provide an endpoint for the selected service that lists the calling pattern for 
 - Appropriate logging. As a developer, how can I be made aware of an error for a given request and be in a position to investigate it?
 - How might you document the endpoints?
 
-## Questions for the interview
-
-How do you manage configuration? - We have a development version of the realtime API we should use for CI.
-
-How do you manage node process when the service is deployed?

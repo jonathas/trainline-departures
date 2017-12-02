@@ -60,18 +60,6 @@ In order to run it in production, instead of running the docker-dev.yml file, yo
 docker-compose up
 ```
 
-## How the configuration can be managed
-
-For a development version to be built on a CI/CD server, a specific job just for building can be created. It can use the docker-dev.yml configuration file for the infrastructure when running the tests.
-
-## How is the Node process managed when the service is deployed
-
-A delivery job can be configured on the CI/CD server, and this job can send the package with the code to the remote server after all tests ran successfully. After the remote server receives the updated code, the delivery job can run on it the command to reload the Node processes, and that happens with no downtime, as they are clustered by pm2 and pm2 allows reload with zero downtime. The command the job will have to run on the remote server is:
-
-```bash
-docker exec -it trainline_api pm2 reload all
-```
-
 ## Further improvements
 
 - Get list of train operators, as a link wasn't given for that, and match it with the operator codes to return the real names
